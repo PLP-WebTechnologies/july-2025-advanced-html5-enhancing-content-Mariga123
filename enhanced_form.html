@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Forms Demo</title>
+    <meta name="description" content="Demonstration of HTML5 advanced content elements and form validation">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .media-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .list-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Enhanced HTML5 Content & Forms Demo</h1>
+            <p>This page demonstrates advanced HTML5 content elements and form validation techniques</p>
+        </header>
+
+        <main>
+            <!-- Section 1: Lists -->
+            <section id="lists">
+                <h2>Organized Content with Lists</h2>
+                
+                <div class="list-container">
+                    <h3>Programming Languages (Ordered List)</h3>
+                    <ol>
+                        <li>JavaScript
+                            <ul>
+                                <li>Frontend Development</li>
+                                <li>Backend Development (Node.js)</li>
+                            </ul>
+                        </li>
+                        <li>Python
+                            <ul>
+                                <li>Data Science</li>
+                                <li>Web Development (Django/Flask)</li>
+                            </ul>
+                        </li>
+                        <li>Java
+                            <ul>
+                                <li>Enterprise Applications</li>
+                                <li>Android Development</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="list-container">
+                    <h3>Web Development Tools (Unordered List)</h3>
+                    <ul>
+                        <li>Code Editors
+                            <ul>
+                                <li>Visual Studio Code</li>
+                                <li>Sublime Text</li>
+                            </ul>
+                        </li>
+                        <li>Version Control
+                            <ul>
+                                <li>Git</li>
+                                <li>GitHub</li>
+                            </ul>
+                        </li>
+                        <li>Package Managers
+                            <ul>
+                                <li>npm</li>
+                                <li>yarn</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list-container">
+                    <h3>Project Phases (Description List)</h3>
+                    <dl>
+                        <dt>Planning</dt>
+                        <dd>Define project scope, requirements, and timeline</dd>
+                        
+                        <dt>Design</dt>
+                        <dd>Create wireframes, mockups, and user interface designs</dd>
+                        
+                        <dt>Development</dt>
+                        <dd>Write code, implement features, and build functionality</dd>
+                        
+                        <dt>Testing</dt>
+                        <dd>Perform unit tests, integration tests, and user acceptance testing</dd>
+                        
+                        <dt>Deployment</dt>
+                        <dd>Release the application to production environment</dd>
+                    </dl>
+                </div>
+            </section>
+
+            <!-- Section 2: Tables -->
+            <section id="tables">
+                <h2>Data Organization with Tables</h2>
+                
+                <h3>Student Performance Report</h3>
+                <table>
+                    <caption>Semester 1 Results - Computer Science Department</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Student ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Programming</th>
+                            <th scope="col">Databases</th>
+                            <th scope="col">Web Dev</th>
+                            <th scope="col">Average</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS001</td>
+                            <td>Alice Johnson</td>
+                            <td>85</td>
+                            <td>92</td>
+                            <td>88</td>
+                            <td>88.3</td>
+                        </tr>
+                        <tr>
+                            <td>CS002</td>
+                            <td>Bob Smith</td>
+                            <td>78</td>
+                            <td>85</td>
+                            <td>90</td>
+                            <td>84.3</td>
+                        </tr>
+                        <tr>
+                            <td>CS003</td>
+                            <td>Carol Davis</td>
+                            <td>92</td>
+                            <td>88</td>
+                            <td>95</td>
+                            <td>91.7</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="5">Class Average</th>
+                            <td>88.1</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <h3>Product Comparison</h3>
+                <table>
+                    <caption>Laptop Specifications Comparison</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Feature</th>
+                            <th scope="col">Model A</th>
+                            <th scope="col">Model B</th>
+                            <th scope="col">Model C</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Processor</th>
+                            <td>Intel i5-1235U</td>
+                            <td>AMD Ryzen 5 5625U</td>
+                            <td>Apple M2</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">RAM</th>
+                            <td>16GB DDR4</td>
+                            <td>16GB DDR4</td>
+                            <td>16GB Unified</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Storage</th>
+                            <td>512GB SSD</td>
+                            <td>1TB SSD</td>
+                            <td>512GB SSD</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Price</th>
+                            <td>$899</td>
+                            <td>$999</td>
+                            <td>$1299</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Section 3: Media -->
+            <section id="media">
+                <h2>Rich Media Content</h2>
+                
+                <div class="media-container">
+                    <h3>Sample Image</h3>
+                    <figure>
+                        <img src="https://via.placeholder.com/400x200/007bff/white?text=Sample+Image" 
+                             alt="Placeholder image demonstrating responsive design"
+                             width="400" 
+                             height="200">
+                        <figcaption>Responsive image example with proper alt text</figcaption>
+                    </figure>
+                </div>
+
+                <div class="media-container">
+                    <h3>Audio Sample</h3>
+                    <audio controls>
+                        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p><small>Note: This is a placeholder audio source</small></p>
+                </div>
+
+                <div class="media-container">
+                    <h3>Video Sample</h3>
+                    <video controls width="400" height="225" poster="https://via.placeholder.com/400x225/28a745/white?text=Video+Poster">
+                        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><small>Note: This is a placeholder video source</small></p>
+                </div>
+            </section>
+
+            <!-- Section 4: HTML5 Form -->
+            <section id="forms">
+                <h2>Comprehensive HTML5 Form with Validation</h2>
+                
+                <form action="#" method="POST" novalidate>
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="fullname">Full Name *</label>
+                            <input type="text" 
+                                   id="fullname" 
+                                   name="fullname" 
+                                   required 
+                                   minlength="3" 
+                                   maxlength="50"
+                                   pattern="[A-Za-z\s\-']+"
+                                   placeholder="Enter your full name"
+                                   autocomplete="name">
+                            <span class="error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   required
+                                   placeholder="your.email@example.com"
+                                   autocomplete="email">
+                            <span class="error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" 
+                                   id="phone" 
+                                   name="phone" 
+                                   required
+                                   pattern="[\+]?[0-9]{10,15}"
+                                   placeholder="+1234567890"
+                                   autocomplete="tel">
+                            <span class="error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birthdate">Date of Birth *</label>
+                            <input type="date" 
+                                   id="birthdate" 
+                                   name="birthdate" 
+                                   required
+                                   max="2006-12-31"
+                                   min="1900-01-01">
+                            <span class="error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="website">Personal Website</label>
+                            <input type="url" 
+                                   id="website" 
+                                   name="website"
+                                   placeholder="https://yourwebsite.com"
+                                   autocomplete="url">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Address Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" 
+                                   id="address" 
+                                   name="address"
+                                   autocomplete="street-address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" 
+                                   id="city" 
+                                   name="city"
+                                   autocomplete="address-level2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zipcode">ZIP Code</label>
+                            <input type="text" 
+                                   id="zipcode" 
+                                   name="zipcode"
+                                   pattern="[0-9]{5}(-[0-9]{4})?"
+                                   placeholder="12345 or 12345-6789"
+                                   autocomplete="postal-code">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferences</legend>
+                        
+                        <div class="form-group">
+                            <label for="experience">Experience Level *</label>
+                            <select id="experience" name="experience" required>
+                                <option value="">Select your level</option>
+                                <option value="beginner">Beginner (0-1 years)</option>
+                                <option value="intermediate">Intermediate (2-5 years)</option>
+                                <option value="advanced">Advanced (5+ years)</option>
+                                <option value="expert">Expert (10+ years)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="salary">Expected Salary Range ($)</label>
+                            <input type="range" 
+                                   id="salary" 
+                                   name="salary"
+                                   min="30000" 
+                                   max="150000" 
+                                   step="5000"
+                                   value="75000"
+                                   oninput="document.getElementById('salaryValue').textContent = '$' + this.value">
+                            <span id="salaryValue">$75000</span>
+                        </div>
+
+                        <fieldset>
+                            <legend>Preferred Contact Method</legend>
+                            <div class="form-group">
+                                <input type="radio" id="contact-email" name="contact-method" value="email" checked>
+                                <label for="contact-email">Email</label>
+                                
+                                <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                                <label for="contact-phone">Phone</label>
+                                
+                                <input type="radio" id="contact-text" name="contact-method" value="text">
+                                <label for="contact-text">Text Message</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Skills (Check all that apply)</legend>
+                            <div class="form-group">
+                                <input type="checkbox" id="skill-html" name="skills[]" value="html">
+                                <label for="skill-html">HTML5</label>
+                                
+                                <input type="checkbox" id="skill-css" name="skills[]" value="css">
+                                <label for="skill-css">CSS3</label>
+                                
+                                <input type="checkbox" id="skill-js" name="skills[]" value="javascript">
+                                <label for="skill-js">JavaScript</label>
+                                
+                                <input type="checkbox" id="skill-react" name="skills[]" value="react">
+                                <label for="skill-react">React</label>
+                                
+                                <input type="checkbox" id="skill-node" name="skills[]" value="nodejs">
+                                <label for="skill-node">Node.js</label>
+                            </div>
+                        </fieldset>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Additional Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="username">Username *</label>
+                            <input type="text" 
+                                   id="username" 
+                                   name="username" 
+                                   required
+                                   minlength="4" 
+                                   maxlength="20"
+                                   pattern="[a-zA-Z0-9_-]+"
+                                   placeholder="Choose a username"
+                                   autocomplete="username">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password *</label>
+                            <input type="password" 
+                                   id="password" 
+                                   name="password" 
+                                   required
+                                   minlength="8"
+                                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                   placeholder="At least 8 characters with numbers and letters">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comments">Comments</label>
+                            <textarea id="comments" 
+                                      name="comments" 
+                                      rows="4" 
+                                      maxlength="500"
+                                      placeholder="Share your thoughts or questions here..."
+                                      readonly></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="file-upload">Upload Resume</label>
+                            <input type="file" 
+                                   id="file-upload" 
+                                   name="resume"
+                                   accept=".pdf,.doc,.docx"
+                                   multiple>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="color">Favorite Color</label>
+                            <input type="color" 
+                                   id="color" 
+                                   name="color" 
+                                   value="#007bff">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="search">Search Keywords</label>
+                            <input type="search" 
+                                   id="search" 
+                                   name="search"
+                                   placeholder="Enter search terms"
+                                   autocomplete="off">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Time Preferences</legend>
+                        
+                        <div class="form-group">
+                            <label for="meeting-time">Preferred Meeting Time</label>
+                            <input type="time" 
+                                   id="meeting-time" 
+                                   name="meeting-time"
+                                   min="09:00" 
+                                   max="17:00"
+                                   step="900">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="week">Preferred Week</label>
+                            <input type="week" 
+                                   id="week" 
+                                   name="week">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="month">Preferred Month</label>
+                            <input type="month" 
+                                   id="month" 
+                                   name="month">
+                        </div>
+                    </fieldset>
+
+                    <button type="submit">Submit Application</button>
+                    <button type="reset">Reset Form</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Enhanced HTML5 Demo. All rights reserved.</p>
+            <p>This page demonstrates HTML5 semantic elements, accessibility features, and native form validation.</p>
+        </footer>
+    </div>
+</body>
+</html>
